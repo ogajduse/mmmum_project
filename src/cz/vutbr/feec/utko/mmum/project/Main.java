@@ -1,4 +1,4 @@
-package sample;
+package cz.vutbr.feec.utko.mmum.project;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
