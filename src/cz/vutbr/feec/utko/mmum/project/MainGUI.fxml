@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane prefHeight="736.0" prefWidth="1145.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.vutbr.feec.utko.mmum.project.Controller">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label layoutX="298.0" layoutY="131.0" prefWidth="91.0" text="DOWNSAMPLE" textAlignment="CENTER" wrapText="false" />
+    <Button id="dS420Button" layoutX="10.0" layoutY="269.0" mnemonicParsing="false" onAction="#overSampleButtonPressed" prefWidth="312.0" text="OVERSAMPLE" />
+    <Button id="dS420Button" layoutX="10.0" layoutY="326.0" mnemonicParsing="false" onAction="#qualityButtonPressed" prefWidth="312.0" text="Quality" />
+    <Label fx:id="psnrLabel" layoutX="14.0" layoutY="372.0" prefHeight="21.0" prefWidth="206.0" text="PSNR:" />
+    <Label fx:id="mseLabel" layoutX="14.0" layoutY="394.0" prefHeight="21.0" prefWidth="206.0" text="MSE:" />
+    <Button id="dS420Button" layoutX="10.0" layoutY="297.0" mnemonicParsing="false" onAction="#showResult" prefWidth="312.0" text="SHOW RESULT RGB" />
+    <Slider fx:id="qualitySlider" layoutX="590.0" layoutY="28.0" majorTickUnit="10.0" min="1.0" minorTickCount="1" orientation="VERTICAL" prefHeight="140.0" prefWidth="84.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <BorderPane layoutX="171.0" layoutY="26.0" prefHeight="95.0" prefWidth="91.0" style="-fx-background-color: red;">
+         <top>
+          <Button id="yButton" mnemonicParsing="false" onAction="#yButtonPressed" prefWidth="70.0" text="Y" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+          <Button id="crButton" mnemonicParsing="false" onAction="#crButtonPressed" prefWidth="70.0" text="Cr" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+          <Button id="cbButton" mnemonicParsing="false" onAction="#cbButtonPressed" prefWidth="70.0" text="Cb" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane layoutX="51.0" layoutY="26.0" prefHeight="95.0" prefWidth="91.0" style="-fx-background-color: red;">
+         <top>
+          <Button id="redButton" mnemonicParsing="false" onAction="#rButtonPressed" prefWidth="70.0" text="RED" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+          <Button id="greenButton" mnemonicParsing="false" onAction="#gButtonPressed" prefWidth="70.0" text="GREEN" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+          <Button id="blueButton" mnemonicParsing="false" onAction="#bButtonPressed" prefWidth="70.0" text="BLUE" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+      <BorderPane layoutX="298.0" layoutY="26.0" prefHeight="95.0" prefWidth="91.0" style="-fx-background-color: red;">
+         <top>
+          <Button id="dS444Button" mnemonicParsing="false" onAction="#dS444ButtonPressed" prefWidth="70.0" text="4:4:4" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+          <Button id="dS422Button" mnemonicParsing="false" onAction="#dS422ButtonPressed" prefWidth="70.0" text="4:2:2" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+          <Button id="dS420Button" mnemonicParsing="false" onAction="#dS420ButtonPressed" prefWidth="70.0001220703125" text="4:2:0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+      <AnchorPane layoutX="407.0" layoutY="28.0" prefHeight="95.0" prefWidth="77.0" style="-fx-background-color: red;">
+         <children>
+            <RadioButton fx:id="radioButton8x8" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" text="8x8" />
+            <RadioButton fx:id="radioButton4x4" layoutX="17.0" layoutY="43.0" mnemonicParsing="false" text="4x4" />
+            <RadioButton fx:id="radioButton2x2" layoutX="17.0" layoutY="71.0" mnemonicParsing="false" text="2x2" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="503.0" layoutY="28.0" prefHeight="95.0" prefWidth="77.0" style="-fx-background-color: red;">
+         <children>
+            <RadioButton fx:id="radioButtonDCT" layoutX="16.0" layoutY="31.0" mnemonicParsing="false" text="DCT" />
+            <RadioButton fx:id="radioButtonWHT" layoutX="15.0" layoutY="56.0" mnemonicParsing="false" text="WHT" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="674.0" layoutY="63.0" mnemonicParsing="false" onAction="#transformAndQuantize" text="T+Q" />
+      <Button layoutX="731.0" layoutY="63.0" mnemonicParsing="false" onAction="#iTransformAndIQuantize" text="iT+iQ" />
+      <Button layoutX="378.0" layoutY="269.0" mnemonicParsing="false" onAction="#DPCM_1" text="1. DPCM" />
+      <Button layoutX="378.0" layoutY="311.0" mnemonicParsing="false" onAction="#FULL_s" text="2. Full search" />
+      <Button layoutX="378.0" layoutY="345.0" mnemonicParsing="false" onAction="#DPCM_2" text="3. DPCM" />
+      <Button layoutX="377.0" layoutY="381.0" mnemonicParsing="false" onAction="#SAD_pred_po" text="4. SAD" />
+      <Label fx:id="sad_label1" layoutX="375.0" layoutY="415.0" prefHeight="21.0" prefWidth="206.0" text="Pred:" />
+      <Label fx:id="sad_label2" layoutX="375.0" layoutY="436.0" prefHeight="21.0" prefWidth="206.0" text="Po:" />
+      <ChoiceBox fx:id="choice_box_n" layoutX="498.0" layoutY="311.0" prefWidth="150.0" />
+      <Label fx:id="sad_label3" layoutX="367.0" layoutY="457.0" prefHeight="21.0" prefWidth="287.0" text="Dif: " />
+      <Button layoutX="377.0" layoutY="495.0" mnemonicParsing="false" onAction="#threeStepSearch" text="ThreeStepSearch" />
+      <Button layoutX="376.0" layoutY="537.0" mnemonicParsing="false" onAction="#oneattime" text="OneAtTime" />
+  </children>
+</AnchorPane>
