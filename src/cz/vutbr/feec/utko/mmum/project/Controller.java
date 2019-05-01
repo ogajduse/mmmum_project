@@ -18,7 +18,7 @@ public class Controller {
     public static final int S422 = 8;
     public static final int S420 = 9;
     public static final int S411 = 10;
-    public int macroblock_size;
+    public int macroblockSize;
     private int vzorkovani = S444;
 
     private Matrix quantizationMatrix8Y;
@@ -28,14 +28,14 @@ public class Controller {
 
     private ImagePlus imagePlus;
     private ColorTransform colorTransform;
-    private ColorTransform colorTransform_stvorec1;
-    private ColorTransform colorTransform_stvorec2;
+    private ColorTransform colorTransformSquare1;
+    private ColorTransform colorTransformSquare2;
     private ColorTransform colorTransformOrig;
 
-    String block_size;
+    String blockSize;
 
     @FXML
-    private ChoiceBox choice_box_n;
+    private ChoiceBox choiceBoxN;
 
     @FXML
     private Button redButton;
@@ -52,11 +52,11 @@ public class Controller {
     @FXML
     private Label psnrLabel;
     @FXML
-    private Label sad_label1;
+    private Label sadLabel1;
     @FXML
-    private Label sad_label2;
+    private Label sadLabel2;
     @FXML
-    private Label sad_label3;
+    private Label sadLabel3;
     @FXML
     private Label mseLabel;
     @FXML
@@ -78,8 +78,8 @@ public class Controller {
     private RadioButton radioButtonWHT;
     final ToggleGroup transformTypeGroup = new ToggleGroup();
     private RadioButton selectedTransformRadioButton;
-    private ImagePlus imagePlus_ctverec1;
-    private ImagePlus imagePlus_ctverec2;
+    private ImagePlus imagePlusSquare1;
+    private ImagePlus imagePlusSquare2;
 
     public void yButtonPressed(ActionEvent event){
 
@@ -141,15 +141,15 @@ public class Controller {
 
     }
 
-    public void DPCM_1(ActionEvent event) {
+    public void DPCM1(ActionEvent event) {
 
     }
 
-    public void DPCM_2(ActionEvent event) {
+    public void DPCM2(ActionEvent event) {
 
     }
 
-    public void FULL_s(ActionEvent event) {
+    public void FULLSearch(ActionEvent event) {
 
     }
 
@@ -157,11 +157,11 @@ public class Controller {
 
     }
 
-    public void oneattime(ActionEvent event) {
+    public void oneAtTime(ActionEvent event) {
 
     }
 
-    public void SAD_pred_po(ActionEvent event) {
+    public void SADBeforeAfter(ActionEvent event) {
 
     }
 }

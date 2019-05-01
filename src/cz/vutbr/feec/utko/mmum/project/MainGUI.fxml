@@ -66,15 +66,15 @@
       </AnchorPane>
       <Button layoutX="674.0" layoutY="63.0" mnemonicParsing="false" onAction="#transformAndQuantize" text="T+Q" />
       <Button layoutX="731.0" layoutY="63.0" mnemonicParsing="false" onAction="#iTransformAndIQuantize" text="iT+iQ" />
-      <Button layoutX="378.0" layoutY="269.0" mnemonicParsing="false" onAction="#DPCM_1" text="1. DPCM" />
-      <Button layoutX="378.0" layoutY="311.0" mnemonicParsing="false" onAction="#FULL_s" text="2. Full search" />
-      <Button layoutX="378.0" layoutY="345.0" mnemonicParsing="false" onAction="#DPCM_2" text="3. DPCM" />
-      <Button layoutX="377.0" layoutY="381.0" mnemonicParsing="false" onAction="#SAD_pred_po" text="4. SAD" />
+      <Button layoutX="378.0" layoutY="269.0" mnemonicParsing="false" onAction="#DPCM1" text="1. DPCM" />
+      <Button layoutX="378.0" layoutY="311.0" mnemonicParsing="false" onAction="#FULLSearch" text="2. Full search" />
+      <Button layoutX="378.0" layoutY="345.0" mnemonicParsing="false" onAction="#DPCM2" text="3. DPCM" />
+      <Button layoutX="377.0" layoutY="381.0" mnemonicParsing="false" onAction="#SADBeforeAfter" text="4. SAD" />
       <Label fx:id="sad_label1" layoutX="375.0" layoutY="415.0" prefHeight="21.0" prefWidth="206.0" text="Pred:" />
       <Label fx:id="sad_label2" layoutX="375.0" layoutY="436.0" prefHeight="21.0" prefWidth="206.0" text="Po:" />
       <ChoiceBox fx:id="choice_box_n" layoutX="498.0" layoutY="311.0" prefWidth="150.0" />
       <Label fx:id="sad_label3" layoutX="367.0" layoutY="457.0" prefHeight="21.0" prefWidth="287.0" text="Dif: " />
       <Button layoutX="377.0" layoutY="495.0" mnemonicParsing="false" onAction="#threeStepSearch" text="ThreeStepSearch" />
-      <Button layoutX="376.0" layoutY="537.0" mnemonicParsing="false" onAction="#oneattime" text="OneAtTime" />
+      <Button layoutX="376.0" layoutY="537.0" mnemonicParsing="false" onAction="#oneAtTime" text="OneAtTime" />
   </children>
 </AnchorPane>
