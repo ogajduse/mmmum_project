@@ -312,257 +312,257 @@ public class Controller implements Initializable {
     }
 
     public void DPCM1(ActionEvent event) {
-//        colorTransform.setY(Functions.DPCM(colorTransform_stvorec2.getY(), colorTransform_stvorec1.getY()));
-//        getComponent(Y).show();
-//        colorTransform.setcB(Functions.DPCM(colorTransform_stvorec2.getcB(), colorTransform_stvorec1.getcB()));
-//        getComponent(CB).show();
-//        colorTransform.setcR(Functions.DPCM(colorTransform_stvorec2.getcR(), colorTransform_stvorec1.getcR()));
-//        getComponent(CR).show();
+        colorTransform.setY(ImageProcessing.DPCM(colorTransformSquare2.getY(), colorTransformSquare1.getY()));
+        getComponent(Y).show();
+        colorTransform.setcB(ImageProcessing.DPCM(colorTransformSquare2.getcB(), colorTransformSquare1.getcB()));
+        getComponent(CB).show();
+        colorTransform.setcR(ImageProcessing.DPCM(colorTransformSquare2.getcR(), colorTransformSquare1.getcR()));
+        getComponent(CR).show();
     }
 
     public void DPCM2(ActionEvent event) {
-//        colorTransform.setY(
-//                Functions.DPCM(
-//                        Functions.FULL_search_i(
-//                                Functions.FULL_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getY(),
-//                                macroblock_size
-//                        ),
-//                        colorTransform_stvorec2.getY()
-//                )
-//        );
-//
-//        getComponent(Y).show();
-//
-//        colorTransform.setcB(
-//                Functions.DPCM(
-//                        Functions.FULL_search_i(
-//                                Functions.FULL_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getcB(),
-//                                macroblock_size
-//                        ),
-//                        colorTransform_stvorec2.getcB()
-//                )
-//        );
-//
-//        getComponent(CB).show();
-//
-//        colorTransform.setcR(
-//                Functions.DPCM(
-//                        Functions.FULL_search_i(
-//                                Functions.FULL_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getcR(),
-//                                macroblock_size
-//                        ),
-//                        colorTransform_stvorec2.getcR()
-//                )
-//        );
-//
-//        getComponent(CR).show();
+        colorTransform.setY(
+                ImageProcessing.DPCM(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.fullSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getY(),
+                                macroBlockSize
+                        ),
+                        colorTransformSquare2.getY()
+                )
+        );
+
+        getComponent(Y).show();
+
+        colorTransform.setcB(
+                ImageProcessing.DPCM(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.fullSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getcB(),
+                                macroBlockSize
+                        ),
+                        colorTransformSquare2.getcB()
+                )
+        );
+
+        getComponent(CB).show();
+
+        colorTransform.setcR(
+                ImageProcessing.DPCM(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.fullSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getcR(),
+                                macroBlockSize
+                        ),
+                        colorTransformSquare2.getcR()
+                )
+        );
+
+        getComponent(CR).show();
     }
 
     public void FULLSearch(ActionEvent event) {
-//        colorTransform.setY(
-//                Functions.Full_search_chyba_i(
-//                        Functions.FULL_search_i(
-//                                Functions.FULL_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getY(),
-//                                macroblock_size
-//                        ),
-//                        Functions.Full_search_chyba(Functions.FULL_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getY(),
-//                                macroblock_size,
-//                                colorTransform_stvorec2.getY())
-//                )
-//        );
-//
-//        getComponent(Y).show();
-//
-//        colorTransform.setcB(
-//                Functions.Full_search_chyba_i(
-//                        Functions.FULL_search_i(
-//                                Functions.FULL_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getcB(),
-//                                macroblock_size
-//                        ),
-//                        Functions.Full_search_chyba(Functions.FULL_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getcB(),
-//                                macroblock_size,
-//                                colorTransform_stvorec2.getcB())
-//                )
-//        );
-//
-//        getComponent(CB).show();
-//
-//        colorTransform.setcR(
-//                Functions.Full_search_chyba_i(
-//                        Functions.FULL_search_i(
-//                                Functions.FULL_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getcR(),
-//                                macroblock_size
-//                        ),
-//                        Functions.Full_search_chyba(Functions.FULL_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getcR(),
-//                                macroblock_size,
-//                                colorTransform_stvorec2.getcR())
-//                )
-//        );
-//
-//        getComponent(CR).show();
-//
-//        showResult();
+        colorTransform.setY(
+                ImageProcessing.fullSearchErrorI(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.fullSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getY(),
+                                macroBlockSize
+                        ),
+                        ImageProcessing.fullSearchError(ImageProcessing.fullSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getY(),
+                                macroBlockSize,
+                                colorTransformSquare2.getY())
+                )
+        );
+
+        getComponent(Y).show();
+
+        colorTransform.setcB(
+                ImageProcessing.fullSearchErrorI(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.fullSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getcB(),
+                                macroBlockSize
+                        ),
+                        ImageProcessing.fullSearchError(ImageProcessing.fullSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getcB(),
+                                macroBlockSize,
+                                colorTransformSquare2.getcB())
+                )
+        );
+
+        getComponent(CB).show();
+
+        colorTransform.setcR(
+                ImageProcessing.fullSearchErrorI(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.fullSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getcR(),
+                                macroBlockSize
+                        ),
+                        ImageProcessing.fullSearchError(ImageProcessing.fullSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getcR(),
+                                macroBlockSize,
+                                colorTransformSquare2.getcR())
+                )
+        );
+
+        getComponent(CR).show();
+
+        showResult();
     }
 
     public void threeStepSearch(ActionEvent event) {
-//        colorTransform.setY(
-//                Functions.Full_search_chyba_i(
-//                        Functions.FULL_search_i(
-//                                Functions.N_step_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size, 3),
-//                                colorTransform_stvorec1.getY(),
-//                                macroblock_size
-//                        ),
-//                        Functions.Full_search_chyba(Functions.N_step_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size, 3),
-//                                colorTransform_stvorec1.getY(),
-//                                macroblock_size,
-//                                colorTransform_stvorec2.getY())
-//                )
-//        );
-//
-//        getComponent(Y).show();
-//
-//        colorTransform.setcB(
-//                Functions.Full_search_chyba_i(
-//                        Functions.FULL_search_i(
-//                                Functions.N_step_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size, 3),
-//                                colorTransform_stvorec1.getcB(),
-//                                macroblock_size
-//                        ),
-//                        Functions.Full_search_chyba(Functions.N_step_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size, 3),
-//                                colorTransform_stvorec1.getcB(),
-//                                macroblock_size,
-//                                colorTransform_stvorec2.getcB())
-//                )
-//        );
-//
-//        getComponent(CB).show();
-//
-//        colorTransform.setcR(
-//                Functions.Full_search_chyba_i(
-//                        Functions.FULL_search_i(
-//                                Functions.N_step_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size, 3),
-//                                colorTransform_stvorec1.getcR(),
-//                                macroblock_size
-//                        ),
-//                        Functions.Full_search_chyba(Functions.N_step_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size, 3),
-//                                colorTransform_stvorec1.getcR(),
-//                                macroblock_size,
-//                                colorTransform_stvorec2.getcR())
-//                )
-//        );
-//
-//        getComponent(CR).show();
-//
-//        showResult();
+        colorTransform.setY(
+                ImageProcessing.fullSearchErrorI(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.nStepSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize, 3),
+                                colorTransformSquare1.getY(),
+                                macroBlockSize
+                        ),
+                        ImageProcessing.fullSearchError(ImageProcessing.nStepSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize, 3),
+                                colorTransformSquare1.getY(),
+                                macroBlockSize,
+                                colorTransformSquare2.getY())
+                )
+        );
+
+        getComponent(Y).show();
+
+        colorTransform.setcB(
+                ImageProcessing.fullSearchErrorI(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.nStepSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize, 3),
+                                colorTransformSquare1.getcB(),
+                                macroBlockSize
+                        ),
+                        ImageProcessing.fullSearchError(ImageProcessing.nStepSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize, 3),
+                                colorTransformSquare1.getcB(),
+                                macroBlockSize,
+                                colorTransformSquare2.getcB())
+                )
+        );
+
+        getComponent(CB).show();
+
+        colorTransform.setcR(
+                ImageProcessing.fullSearchErrorI(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.nStepSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize, 3),
+                                colorTransformSquare1.getcR(),
+                                macroBlockSize
+                        ),
+                        ImageProcessing.fullSearchError(ImageProcessing.nStepSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize, 3),
+                                colorTransformSquare1.getcR(),
+                                macroBlockSize,
+                                colorTransformSquare2.getcR())
+                )
+        );
+
+        getComponent(CR).show();
+
+        showResult();
     }
 
     public void oneAtTime(ActionEvent event) {
-//        colorTransform.setY(
-//                Functions.Full_search_chyba_i(
-//                        Functions.FULL_search_i(
-//                                Functions.one_at_search(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getY(),
-//                                macroblock_size
-//                        ),
-//                        Functions.Full_search_chyba(Functions.one_at_search(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getY(),
-//                                macroblock_size,
-//                                colorTransform_stvorec2.getY())
-//                )
-//        );
-//
-//        getComponent(Y).show();
-//
-//        colorTransform.setcB(
-//                Functions.Full_search_chyba_i(
-//                        Functions.FULL_search_i(
-//                                Functions.one_at_search(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getcB(),
-//                                macroblock_size
-//                        ),
-//                        Functions.Full_search_chyba(Functions.one_at_search(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getcB(),
-//                                macroblock_size,
-//                                colorTransform_stvorec2.getcB())
-//                )
-//        );
-//
-//        getComponent(CB).show();
-//
-//        colorTransform.setcR(
-//                Functions.Full_search_chyba_i(
-//                        Functions.FULL_search_i(
-//                                Functions.one_at_search(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getcR(),
-//                                macroblock_size
-//                        ),
-//                        Functions.Full_search_chyba(Functions.one_at_search(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                                colorTransform_stvorec1.getcR(),
-//                                macroblock_size,
-//                                colorTransform_stvorec2.getcR())
-//                )
-//        );
-//
-//        getComponent(CR).show();
-//
-//        showResult();
+        colorTransform.setY(
+                ImageProcessing.fullSearchErrorI(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.oneAtSearch(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getY(),
+                                macroBlockSize
+                        ),
+                        ImageProcessing.fullSearchError(ImageProcessing.oneAtSearch(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getY(),
+                                macroBlockSize,
+                                colorTransformSquare2.getY())
+                )
+        );
+
+        getComponent(Y).show();
+
+        colorTransform.setcB(
+                ImageProcessing.fullSearchErrorI(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.oneAtSearch(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getcB(),
+                                macroBlockSize
+                        ),
+                        ImageProcessing.fullSearchError(ImageProcessing.oneAtSearch(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getcB(),
+                                macroBlockSize,
+                                colorTransformSquare2.getcB())
+                )
+        );
+
+        getComponent(CB).show();
+
+        colorTransform.setcR(
+                ImageProcessing.fullSearchErrorI(
+                        ImageProcessing.fullSearchI(
+                                ImageProcessing.oneAtSearch(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getcR(),
+                                macroBlockSize
+                        ),
+                        ImageProcessing.fullSearchError(ImageProcessing.oneAtSearch(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                                colorTransformSquare1.getcR(),
+                                macroBlockSize,
+                                colorTransformSquare2.getcR())
+                )
+        );
+
+        getComponent(CR).show();
+
+        showResult();
     }
 
     public void SADBeforeAfter(ActionEvent event) {
-//        int height = colorTransform_stvorec2.getY().getRowDimension();
-//        int width = colorTransform_stvorec2.getY().getColumnDimension();
-//
-//        double pred;
-//        double po;
-//        double po3step;
-//        double poone;
-//        double rozdiel;
-//        double percenta;
-//
-//        pred = Functions.SAD(colorTransform_stvorec2.getY(), colorTransform_stvorec1.getY());
-//
-//        po = Functions.SAD(
-//                Functions.FULL_search_i(
-//                        Functions.FULL_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                        colorTransform_stvorec1.getY(),
-//                        macroblock_size
-//                ),
-//                colorTransform_stvorec2.getY()
-//        );
-//
-//        po3step = Functions.SAD(
-//                Functions.FULL_search_i(
-//                        Functions.N_step_search_vectors(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size, 3),
-//                        colorTransform_stvorec2.getY(),
-//                        macroblock_size
-//                ),
-//                colorTransform_stvorec1.getY()
-//        );
-//
-//        poone = Functions.SAD(
-//                Functions.FULL_search_i(
-//                        Functions.one_at_search(colorTransform_stvorec1.getY(), colorTransform_stvorec2.getY(), macroblock_size),
-//                        colorTransform_stvorec1.getY(),
-//                        macroblock_size
-//                ),
-//                colorTransform_stvorec2.getY()
-//        );
-//
-//        rozdiel = Math.abs(pred - po);
-//
-//        sad_label1.setText("Pred: " + (int)pred);
-//        sad_label2.setText("Po: " + (int)po + ";3: "+ (int)po3step + "; 1: " + (int)poone);
-//
-//        sad_label3.setText("Dif: " + (int)rozdiel);
+        int height = colorTransformSquare2.getY().getRowDimension();
+        int width = colorTransformSquare2.getY().getColumnDimension();
+
+        double before;
+        double after;
+        double po3step;
+        double poone;
+        double difference;
+        double percentage;
+
+        before = ImageProcessing.SAD(colorTransformSquare2.getY(), colorTransformSquare1.getY());
+
+        after = ImageProcessing.SAD(
+                ImageProcessing.fullSearchI(
+                        ImageProcessing.fullSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                        colorTransformSquare1.getY(),
+                        macroBlockSize
+                ),
+                colorTransformSquare2.getY()
+        );
+
+        po3step = ImageProcessing.SAD(
+                ImageProcessing.fullSearchI(
+                        ImageProcessing.nStepSearchVectors(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize, 3),
+                        colorTransformSquare2.getY(),
+                        macroBlockSize
+                ),
+                colorTransformSquare1.getY()
+        );
+
+        poone = ImageProcessing.SAD(
+                ImageProcessing.fullSearchI(
+                        ImageProcessing.oneAtSearch(colorTransformSquare1.getY(), colorTransformSquare2.getY(), macroBlockSize),
+                        colorTransformSquare1.getY(),
+                        macroBlockSize
+                ),
+                colorTransformSquare2.getY()
+        );
+
+        difference = Math.abs(before - after);
+
+        sadLabel1.setText("Pred: " + (int)before);
+        sadLabel2.setText("Po: " + (int)after + ";3: "+ (int)po3step + "; 1: " + (int)poone);
+
+        sadLabel3.setText("Dif: " + (int)difference);
     }
 
     private void loadOrigImage() {
@@ -574,7 +574,6 @@ public class Controller implements Initializable {
     }
 
     private void loadOrigImageSquares() {
-
         this.imagePlusSquare1 = new ImagePlus("img/pomaly.jpg");
         this.colorTransformSquare1 = new ColorTransform(imagePlusSquare1.getBufferedImage());
         this.colorTransformSquare1.getRGB();
