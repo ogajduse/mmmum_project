@@ -39,7 +39,7 @@ public class Controller implements Initializable {
     private String blockSize;
 
     @FXML
-    private ChoiceBox choiceBoxN;
+    private ChoiceBox<String> choiceBoxN;
 
     @FXML
     private Button redButton;
@@ -73,14 +73,14 @@ public class Controller implements Initializable {
     @FXML
     private RadioButton radioButton2x2;
 
-    final ToggleGroup transformBlockSizeGroup = new ToggleGroup();
+    private final ToggleGroup transformBlockSizeGroup = new ToggleGroup();
     private RadioButton selectedTransformBlockSizeRadioButton;
 
     @FXML
     private RadioButton radioButtonDCT;
     @FXML
     private RadioButton radioButtonWHT;
-    final ToggleGroup transformTypeGroup = new ToggleGroup();
+    private final ToggleGroup transformTypeGroup = new ToggleGroup();
     private RadioButton selectedTransformRadioButton;
     private ImagePlus imagePlusSquare1;
     private ImagePlus imagePlusSquare2;
@@ -111,7 +111,7 @@ public class Controller implements Initializable {
 
         choiceBoxN.setItems(FXCollections.observableArrayList("2 x 2", "4 x 4", "8 x 8", "16 x 16"));
         choiceBoxN.getSelectionModel().select(3);
-        blockSize = choiceBoxN.getValue().toString();
+        blockSize = choiceBoxN.getValue();
         macroBlockSize = 16;
         choiceBoxN.setTooltip(new Tooltip("Choose block size"));
         choiceBoxN.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
