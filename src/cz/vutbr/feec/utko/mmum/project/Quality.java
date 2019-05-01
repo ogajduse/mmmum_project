@@ -1,8 +1,7 @@
 package cz.vutbr.feec.utko.mmum.project;
 
-public class Quality {
-
-    public double getMse(int[][] original, int[][] edited) {
+class Quality {
+    static double getMse(int[][] original, int[][] edited) {
         int width = original.length;
         int height = original[0].length;
         double mse = 0;
@@ -15,7 +14,7 @@ public class Quality {
         return mse;
     }
 
-    public double getPsnr(int[][] original, int[][] edited) {
+    static double getPsnr(int[][] original, int[][] edited) {
         return 10 * Math.log10(Math.pow(255, 2) / getMse(original, edited));
     }
 }

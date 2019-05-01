@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
 
-public class ColorTransform {
+class ColorTransform {
     private BufferedImage bImage;
     private ColorModel colorModel;
     private int imageHeight;
@@ -46,7 +46,6 @@ public class ColorTransform {
         return cR;
     }
 
-
     public void setY(Matrix y) {
         this.y = y;
     }
@@ -66,7 +65,6 @@ public class ColorTransform {
     public int getImageWidth() {
         return imageWidth;
     }
-
 
     public static final double[][] quantizationMatrix8Y = {
             {16, 11, 10, 16, 24, 40, 51, 61},
@@ -132,7 +130,6 @@ public class ColorTransform {
         return (new ImagePlus("", bImage));
     }
 
-
     public ImagePlus setImageFromRGB(int width, int height, int[][] x, String component) {
         BufferedImage bImage = new BufferedImage(width, height,
                 BufferedImage.TYPE_INT_RGB);
@@ -145,7 +142,6 @@ public class ColorTransform {
         }
         return (new ImagePlus(component, bImage));
     }
-
 
     public ImagePlus setImageFromRGB(int width, int height, Matrix x,
                                      String component) {
@@ -207,7 +203,6 @@ public class ColorTransform {
 
     }
 
-
     public Matrix transform(int size, Matrix transformMatrix, Matrix inputMatrix) {
         Matrix out = transformMatrix.times(inputMatrix);
         out = out.times(transformMatrix.transpose());
@@ -234,7 +229,6 @@ public class ColorTransform {
         }
         return (new Matrix(result));
     }
-
 
     public Matrix inverseQuantize(int size, Matrix inputMatrix, Matrix quantizeMatrix) {
 
