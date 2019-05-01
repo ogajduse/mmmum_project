@@ -78,8 +78,8 @@ public class Controller {
     private RadioButton radioButtonWHT;
     final ToggleGroup transformTypeGroup = new ToggleGroup();
     private RadioButton selectedTransformRadioButton;
-    private ImagePlus imagePlus_stvorcek1;
-    private ImagePlus imagePlus_stvorcek2;
+    private ImagePlus imagePlus_ctverec1;
+    private ImagePlus imagePlus_ctverec2;
 
     public void yButtonPressed(ActionEvent event){
 
